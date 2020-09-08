@@ -32,7 +32,7 @@ router.get('/:id',(req,res)=>{
     })
 })
 
-router.put('/withdraw',(req,res)=>{
+router.patch('/withdraw',(req,res)=>{
 
     checkBodyData(req);
     const {id,amount} = req.body;
@@ -42,7 +42,7 @@ router.put('/withdraw',(req,res)=>{
     })
 })
 
-router.put('/deposit',(req,res)=>{
+router.patch('/deposit',(req,res)=>{
 
     checkBodyData(req);
     const {id,amount} = req.body;
@@ -55,7 +55,7 @@ router.put('/deposit',(req,res)=>{
     })
 })
 
-router.put('/transfer',(req,res)=>{
+router.patch('/transfer',(req,res)=>{
 
     checkBodyData(req);
     const { originID, destinationID, amount } = req.body;
@@ -65,7 +65,7 @@ router.put('/transfer',(req,res)=>{
     })
 })
 
-router.put('/monthlyInterest/:id',(req,res)=>{
+router.patch('/monthlyInterest/:id',(req,res)=>{
 
     const { id } = req.params;
  
